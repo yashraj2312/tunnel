@@ -9,8 +9,8 @@ export const theme = extendTheme({ config });
 
 export const myNewTheme = extendTheme({
   colors: {
-    primary: "#4b4453",
-    primaryDark: "#443d4b",
-    secondary: "#9a94a1",
+    primary: "#dc3f34",
+    primaryDark: "#dc3f34",
+    secondary: "#084c61",
   },
 });

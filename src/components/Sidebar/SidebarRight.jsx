@@ -1,8 +1,5 @@
 import {
   Flex,
-  Input,
-  InputLeftElement,
-  InputGroup,
   HStack,
   StackDivider,
   Divider,
@@ -12,7 +9,7 @@ import {
   Text,
   Button,
 } from "@chakra-ui/react";
-import { Search2Icon, SmallAddIcon } from "@chakra-ui/icons";
+import { PlusSquareIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
@@ -28,7 +25,7 @@ export function SidebarRight() {
     auth: { userToken, user },
   } = useSelector((state) => state);
 
-  const followBoxColor = useColorModeValue("primaryDark", "gray.400");
+  const followBoxColor = useColorModeValue("primaryDark");
 
   const usersSuggestion = allUsers.filter(
     (currUser) =>
@@ -58,14 +55,6 @@ export function SidebarRight() {
       py={6}
       px={2}
     >
-      <InputGroup>
-        <InputLeftElement
-          pointerEvents='none'
-          children={<Search2Icon color='gray.300' />}
-        />
-        <Input type='text' placeholder='Search user' />
-      </InputGroup>
-      <Divider />
       <Flex
         divider={<StackDivider borderColor='gray.200' />}
         align='stretch'
@@ -75,7 +64,7 @@ export function SidebarRight() {
         boxShadow='base'
       >
         <Heading as='h5' size='sm' p={2}>
-          Who to follow?
+          Folks you might follow!
         </Heading>
         <Divider />
         {usersSuggestion.map((user) => {
@@ -101,19 +90,20 @@ export function SidebarRight() {
               <Button
                 size={"sm"}
                 color={followBoxColor}
-                variant={"ghost"}
+                colorScheme='red'
+                variant={"outline"}
                 onClick={() => btnFollowHandler(user._id)}
               >
                 {followUsers.some(
                   (followUser) => followUser._id === user._id
                 ) ? (
                   <>
-                    <span>following</span>
+                    <span>Following</span>
                   </>
                 ) : (
                   <>
-                    <span>follow</span>
-                    <SmallAddIcon />
+                    <span>Follow</span>
+                    <PlusSquareIcon />
                   </>
                 )}
               </Button>

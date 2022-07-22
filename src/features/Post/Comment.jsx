@@ -19,7 +19,7 @@ import { toast } from "react-toastify";
 
 export function Comment({ postId, comments }) {
   const dispatch = useDispatch();
-  const commentsBgColors = useColorModeValue("gray.100", "gray.600");
+  const commentsBgColors = useColorModeValue("gray.50");
   const [commentData, setCommentData] = useState("");
 
   const {
@@ -59,7 +59,7 @@ export function Comment({ postId, comments }) {
             pr='4.5rem'
             type={"text"}
             value={commentData}
-            placeholder='Send your reply'
+            placeholder='Throttle your reply'
             onChange={commentDataChangeHandler}
           />
           <InputRightElement width='24'>
@@ -72,10 +72,10 @@ export function Comment({ postId, comments }) {
               bg={"primary"}
               color={"white"}
               _hover={{
-                bg: useColorModeValue("gray.700", "gray.600"),
+                bg: useColorModeValue("secondary"),
               }}
             >
-              Comment
+              Reply
             </Button>
           </InputRightElement>
         </InputGroup>

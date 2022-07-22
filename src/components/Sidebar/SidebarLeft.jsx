@@ -9,11 +9,10 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import {
-  FaEllipsisV,
-  AiOutlineHome,
-  AiOutlineRocket,
-  BiBookmarks,
-  CgProfile,
+  SiHomebridge,
+  SiAzuredataexplorer,
+  BsFillBookmarkStarFill,
+  FaUserCog,
 } from "assets";
 import { NavLink } from "react-router-dom";
 import styles from "./sidebar.module.css";
@@ -59,7 +58,7 @@ export function SidebarLeft() {
             }
           >
             <Flex alignItems={"center"} lineHeight={10}>
-              <AiOutlineHome />
+              <SiHomebridge />
               <Box px={2}>Home</Box>
             </Flex>
           </NavLink>
@@ -72,7 +71,7 @@ export function SidebarLeft() {
             }
           >
             <Flex alignItems={"center"} lineHeight={10}>
-              <AiOutlineRocket />
+              <SiAzuredataexplorer />
               <Box px={2}>Explore</Box>
             </Flex>
           </NavLink>
@@ -86,7 +85,7 @@ export function SidebarLeft() {
             }
           >
             <Flex alignItems={"center"} lineHeight={10}>
-              <BiBookmarks />
+              <BsFillBookmarkStarFill />
               <Box px={2}>Bookmarks</Box>
             </Flex>
           </NavLink>
@@ -100,7 +99,7 @@ export function SidebarLeft() {
             }
           >
             <Flex alignItems={"center"} lineHeight={10}>
-              <CgProfile />
+              <FaUserCog />
               <Box px={2}>Profile</Box>
             </Flex>
           </NavLink>
@@ -112,7 +111,7 @@ export function SidebarLeft() {
             bg={"primary"}
             color={"white"}
             _hover={{
-              bg: useColorModeValue("gray.700", "gray.600"),
+              bg: useColorModeValue("#084c61"),
             }}
           >
             Logout
@@ -120,7 +119,7 @@ export function SidebarLeft() {
         </Box>
 
         <HStack spacing='24px'>
-          <Avatar name='Dan Abrahmov' src={user.profilePic} />
+          <Avatar name='John Doe' src={user.profilePic} />
 
           <Heading as='h5' size='sm'>
             {`${user.firstName} ${user.lastName}`}

@@ -45,7 +45,7 @@ export function PostTextBox() {
         <Textarea
           value={value}
           onChange={handleInputChange}
-          placeholder='Tell your friends, How are you feeling today?'
+          placeholder="What's happening?"
           size='sm'
         />
       </HStack>
@@ -53,14 +53,14 @@ export function PostTextBox() {
         <Box></Box>
         <Button
           onClick={postHandler}
-          w={24}
+          w={32}
           bg={"primary"}
           color={"white"}
           _hover={{
-            bg: useColorModeValue("gray.700", "gray.600"),
+            bg: useColorModeValue('secondary'),
           }}
         >
-          Post
+          Throttle
         </Button>
       </HStack>
     </Flex>

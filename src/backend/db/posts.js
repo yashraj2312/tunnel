@@ -102,7 +102,7 @@ export const posts = [
 
   {
     _id: uuid(),
-    content: "Checkout yashraj.space to know what yash is upto",
+    content: "Checkout yashraj.space to know what yash is upto these days.",
     likes: {
       likeCount: 10,
       likedBy: [],

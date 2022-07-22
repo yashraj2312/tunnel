@@ -7,7 +7,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-import { BiAbacus } from "assets";
+import { ImFilter } from "assets";
 import { useDispatch } from "react-redux";
 import { sortBy } from "features/Post/postSlice";
 
@@ -17,18 +17,18 @@ export function Filters() {
   return (
     <Box>
       <Menu>
-        <MenuButton as={Button} p={2} rightIcon={<BiAbacus />}>
+        <MenuButton as={Button} p={2} rightIcon={<ImFilter />}>
           Filters
         </MenuButton>
         <MenuList>
           <MenuItem onClick={() => dispatch(sortBy("trending"))}>
-            Filter by trending
+            Trending
           </MenuItem>
           <MenuItem onClick={() => dispatch(sortBy("oldest"))}>
-            Filter by oldest
+            Oldest
           </MenuItem>
           <MenuItem onClick={() => dispatch(sortBy("recent"))}>
-            Filter by recent
+            Recent
           </MenuItem>
         </MenuList>
       </Menu>
