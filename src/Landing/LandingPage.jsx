@@ -15,6 +15,14 @@ export const landingPage =()=>{
                     Have a thought? Just share with friends.
                 </p>
                 </div>
+                <div className="py-32">
+                    <Link to="sign-up">
+                        <button className="btn primary-btn">Get Started</button>
+                    </Link>
+                </div>
+            </section>
+            <section className="right-section ml-auto">
+                <img src="../assets/"/>
             </section>
         </div>
     )
