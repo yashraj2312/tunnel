@@ -1,7 +1,7 @@
 import "./landingPage.css"
 import { Link } from "react-router-dom"
 
-export const landingPage =()=>{
+export const LandingPage =()=>{
     return(
         <div className="landingPage-container">
             <section className="left-section text-left">
@@ -22,7 +22,7 @@ export const landingPage =()=>{
                 </div>
             </section>
             <section className="right-section ml-auto">
-                <img src="../assets/"/>
+                <img src="../assets/images/site-logo3.png" alt=""/>
             </section>
         </div>
     )
