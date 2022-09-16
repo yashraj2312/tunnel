@@ -19,6 +19,7 @@ import { useDispatch } from "react-redux";
 import { Link as ReactRouterLink } from "react-router-dom";
 import { toast } from "react-toastify";
 
+
 export function Login() {
   const navigate = useNavigate();
 
@@ -62,16 +63,10 @@ export function Login() {
     >
       <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
         <Stack align={"center"}>
-          <Heading fontSize={"4xl"}>Start Tunneling</Heading>
+          
           <Text fontSize={"lg"} color={"gray.600"}>
             {" "}
-            <Link
-              as={ReactRouterLink}
-              to='/sign-up'
-              color={useColorModeValue("primary", "secondary")}
-            >
-              New User? Sign up
-            </Link>{" "}
+            
             
           </Text>
         </Stack>
@@ -120,9 +115,7 @@ export function Login() {
                 >
                   Remember me
                 </Checkbox>
-                <Link color={useColorModeValue("primary", "secondary")}>
-                  Forgot password?
-                </Link>
+                
               </Stack>
               <Button
                 onClick={loginHandler}
@@ -144,6 +137,27 @@ export function Login() {
               >
                 Sample Login
               </Button>
+              {/* <Button
+                bg={"primary"}
+                color={"white"}
+                as={ReactRouterLink} to={'/sign-up'}
+                _hover={{
+                  bg: useColorModeValue("gray.700", "gray.600"),
+                }}
+              >
+                Sign up
+              </Button> */}
+              <Text align={"center"}>
+                Already a user?{" "}
+              <Link
+              align={"center"}
+              as={ReactRouterLink}
+              to='/sign-up'
+              color={useColorModeValue("primary", "secondary")}
+            >
+              Sign up
+            </Link>{" "}
+            </Text>
             </Stack>
           </Stack>
         </Box>

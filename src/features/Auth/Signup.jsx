@@ -21,6 +21,7 @@ import { signupUser } from "./authSlice";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 
+
 export function Signup() {
   const dispatch = useDispatch();
 
@@ -181,7 +182,7 @@ export function Signup() {
                 Already a user?{" "}
                 <Link
                   as={ReactRouterLink}
-                  to='/'
+                  to={'/login'}
                   color={useColorModeValue("primary", "secondary")}
                 >
                   Login
