@@ -9,6 +9,7 @@ import {
   Profile,
   SinglePost,
   Explore,
+  CallToActionWithAnnotation
 } from "features";
 import { Routes, Route } from "react-router-dom";
 import Mockman from "mockman-js";
@@ -51,8 +52,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route element={<RestrictAuth />}>
-          <Route path='/' element={<Login />}></Route>
+          <Route path='/' element={<CallToActionWithAnnotation />}></Route>
           <Route path='/sign-up' element={<Signup />}></Route>
+          <Route path='/login' element={<Login/>}></Route>
         </Route>
 
         <Route element={<RequireAuth />}>
