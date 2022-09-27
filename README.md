@@ -17,3 +17,4 @@ Tunnel is a fully functional social media app that lets you share your thoughts 
 - Redux
 - MockBee
 - React Router
+- Chakra UI
